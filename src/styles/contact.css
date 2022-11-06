@@ -1,0 +1,29 @@
+.contact_info-container{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.single_info-box{
+    width: 12rem;
+    height: 5.8rem;
+    background: #bac5e0;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #7865ff;
+    margin-bottom: 35px;
+}
+.single_info-box p{
+    font-weight: 300;
+    margin-top: 10px;
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+.single_info-box h6{
+    font-size: 1.1rem;
+}
+
+
+
+
+/*=================================================================Form ===============================================================*/
+
