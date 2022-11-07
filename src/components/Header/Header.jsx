@@ -7,26 +7,86 @@ const nav_links = [
     {
         path:'/home',
         display:'Home',
+        submenu: [{
+            "name": "Alberta",
+            "abbreviation": "AB"
+          },
+          {
+            "name": "British Columbia",
+            "abbreviation": "BC"
+          },
+          {
+            "name": "Manitoba",
+            "abbreviation": "MB"
+          }]
     },
     {
         path:'/about',
         display:'About',
+        submenu: [{
+    "name": "New Brunswick",
+    "abbreviation": "NB"
+  },
+  {
+    "name": "Newfoundland and Labrador",
+    "abbreviation": "NL"
+  }]
     },
     {
         path:'/service',
         display:'Services',
+        submenu: [ {
+    "name": "Nova Scotia",
+    "abbreviation": "NS"
+  },
+  {
+    "name": "Northwest Territories",
+    "abbreviation": "NT"
+  },
+  {
+    "name": "Nunavut",
+    "abbreviation": "NU"
+  },]
      },
     {
         path:'/projects',
         display:'Projects',
+        submenu: [{
+    "name": "Ontario",
+    "abbreviation": "ON"
+  },
+  {
+    "name": "Prince Edward Island",
+    "abbreviation": "PE"
+  },]
     },
     {
         path:'/blog',
         display:'Blog',
+        submenu: [{
+            "name": "Alberta",
+            "abbreviation": "AB"
+          },
+          {
+            "name": "British Columbia",
+            "abbreviation": "BC"
+          },
+          {
+            "name": "Manitoba",
+            "abbreviation": "MB"
+          }]
     },
     {
         path: '/contact',
-        display: 'Contact'
+        display: 'Contact',
+        submenu: [ {
+    "name": "Quebec",
+    "abbreviation": "QC"
+  },
+  {
+    "name": "Saskatchewan",
+    "abbreviation": "SK"
+  }]
     },
     
 ];
@@ -82,13 +142,10 @@ const Header = ({theme, toggleTheme}) => {
                             <li className="home">
                                 <a href="{item.path}">{item.display}</a>
                                 <ul className="submenu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index-v2.html">Home 02</a></li>
-                                    <li><a href="index-v3.html">Home 03</a></li>
-                                    <li><a href="index-v4.html">Home 04</a></li>
-                                    <li><a href="index-v5.html">Home 05</a></li>
-                                    <li><a href="index-v6.html">Home 06</a></li>
-                                    <li><a href="index-v7.html">Home 07</a></li>
+                                {item.submenu.map((items,index)=>(
+                                   <li><a href="index.html"> {items.name}</a></li>
+                                 
+                                ))}  
                                 </ul>
                             </li>
                             ))}
